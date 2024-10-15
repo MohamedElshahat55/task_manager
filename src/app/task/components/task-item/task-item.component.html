@@ -1,0 +1,16 @@
+<div
+  class="flex items-center justify-between p-2 bg-white rounded shadow mb-2 cursor-pointer"
+>
+  <span class="text-lg hidden sm:block">{{ task.id }}</span>
+  <span [class.line-through]="task.completed" class="text-sm md:text-lg">{{
+    task.title
+  }}</span>
+  <span
+    [class.text-green-600]="task.completed"
+    [class.font-bold]="task.completed"
+    [class.text-gray-500]="!task.completed"
+    class="text-sm md:text-lg"
+  >
+    {{ task.completed ? "Completed" : "Pending" }}
+  </span>
+</div>
